@@ -1,0 +1,27 @@
+<ion-content class="ion-padding fondo-perfil" mode="ios">
+  <div class="contenedor-perfil">
+
+    <ion-card class="tarjeta-perfil">
+      <ion-card-header>
+        <ion-card-title>{{ userData?.name }} {{ userData?.lastname }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>Email: {{ userData?.email }}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-list class="lista-opciones">
+      <ion-item button (click)="verHistorial()">
+        <ion-icon name="albums-outline" slot="start"></ion-icon>
+        <ion-label>Historial de viajes</ion-label>
+      </ion-item>
+
+      <ion-item button (click)="editarInformacion()">
+        <ion-icon name="car-outline" slot="start"></ion-icon>
+        <ion-label>Editar información</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Confirmar Viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Tarjeta con detalles del viaje -->
+  <ion-card class="viaje-card">
+    <ion-card-header>
+      <ion-card-title>
+        {{ viaje?.destino }} <!-- Aquí se muestra el título del viaje -->
+      </ion-card-title>
+      <ion-card-subtitle>
+        <p>Fecha: {{ viaje?.horaSalida | date: 'dd/MM/yyyy' }}</p>
+        <p>Hora: {{ viaje?.horaSalida | date: 'HH:mm' }}</p>  
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-text color="">
+        <p>Conductor: {{ conductor?.name }} {{ conductor?.lastname }}</p>
+        <p>Vehículo: {{ vehiculo?.marca }} {{ vehiculo?.modelo }} {{ vehiculo?.patente }}</p>
+      </ion-text>
+      <!-- Descripción del viaje -->
+      <ion-text color="primary">
+        <p>Asientos disponibles: {{ viaje?.asientos }}</p>
+      </ion-text>
+
+      <!-- Información del costo -->
+      <ion-item lines="none">
+        <ion-label>Costo:</ion-label>
+        <div>{{ viaje?.costo | currency }}</div> <!-- Muestra el costo con formato de moneda -->
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botones de Cancelar y Confirmar -->
+  <div class="button-group">
+    <ion-button expand="block" color="danger" routerLink="/lista-viajes" class="cancel-button">
+      Cancelar
+    </ion-button>
+
+    <ion-button expand="block" [color]="reservado ? 'danger' : 'primary'"
+      (click)="reservado ? cancelarReserva() : confirmar()" class="confirm-button">
+      {{ reservado ? 'Cancelar Reserva' : 'Confirmar' }}
+    </ion-button>
+
+    <ion-button expand="block" *ngIf="reservado" (click)="verMapa(id)">Ver Mapa</ion-button>
+
+  </div>
+
+</ion-content>
