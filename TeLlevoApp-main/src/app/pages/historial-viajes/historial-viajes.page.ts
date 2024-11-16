@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class HistorialViajesPage implements OnInit {
 
   viajes = [
-    { fecha: new Date('2024-09-10'), costo: 5000, patente: 'AB-CD-12', chofer: 'Mario Zapata' },
-    { fecha: new Date('2024-09-12'), costo: 7000, patente: 'XY-ZT-89',  chofer: 'Alejandro Sepulveda'},
-    { fecha: new Date('2024-09-15'), costo: 6000, patente: 'LM-NA-56',  chofer: 'Simon Muñoz' },
+    { fecha: new Date('2024-11-02'), costo: 8200, patente: 'RD-KL-34', chofer: 'Carlos Gómez' },
+    { fecha: new Date('2024-11-05'), costo: 9500, patente: 'XY-PQ-75', chofer: 'Ana Ramírez' },
+    { fecha: new Date('2024-11-08'), costo: 6400, patente: 'MN-OP-66', chofer: 'Luis Martínez' },
   ];
+  
 
   constructor() { }
 

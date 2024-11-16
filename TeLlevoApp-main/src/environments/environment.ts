@@ -5,14 +5,13 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 export const environment = {
   production: false,
-  firebaseConfig: {
-    apiKey: "AIzaSyCQ4DyHR3OxRm9g7M2AZF7PIpQYpsSSfsM",
-    authDomain: "tellevoapp-efcd2.firebaseapp.com",
-    projectId: "tellevoapp-efcd2",
-    storageBucket: "tellevoapp-efcd2.appspot.com",
-    messagingSenderId: "874102776496",
-    appId: "1:874102776496:web:0a52c85bd8730e5d131175",
-    measurementId: "G-PLYL9XJN3P"
+  firebaseConfig : {
+    apiKey: "AIzaSyClOSgSLKeT_a8kh0lSzONY-AbI9X0Z2kc",
+    authDomain: "tellevoap-4a40e.firebaseapp.com",
+    projectId: "tellevoap-4a40e",
+    storageBucket: "tellevoap-4a40e.firebasestorage.app",
+    messagingSenderId: "87768225791",
+    appId: "1:87768225791:web:81314e896e570ddbd179ca"
   }
 };
 

@@ -11,10 +11,7 @@ const routes: Routes = [
   {
     path: 'confirmacion',
     loadChildren: () => import('./pages/confirmacion/confirmacion.module').then(m => m.ConfirmacionPageModule)
-  }, {
-    path: 'ajustes',
-    loadChildren: () => import('./pages/ajustes/ajustes.module').then(m => m.AjustesPageModule)
-  },
+  }, 
 
   {
     path: 'historial-viajes',
@@ -30,19 +27,6 @@ const routes: Routes = [
     path: 'lista-viajes',
     loadChildren: () => import('./pages/lista-viajes/lista-viajes.module').then(m => m.ListaViajesPageModule)
   },
-
-
-  {
-    path: 'notificaciones',
-    loadChildren: () => import('./pages/notificaciones/notificaciones.module').then(m => m.NotificacionesPageModule)
-  },
-
-
-  {
-    path: 'pago',
-    loadChildren: () => import('./pages/pago/pago.module').then(m => m.PagoPageModule)
-  },
-
 
   {
     path: 'perfil-usuario',
@@ -67,7 +51,8 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
 
-  },  {
+  },
+  {
     path: 'registro',
     loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
